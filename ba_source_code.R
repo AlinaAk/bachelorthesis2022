@@ -368,6 +368,15 @@ mutated_indels <- function(mut_entry, cds_ref) {
   mod_cds
 }
 
+#' Function to calculate the code usage of codons
+#' relatively to the other codons
+#' @param seq Sequence to be analyzed
+#' @param x Set of codons to calculate the code usage for
+code_usage <- function(seq, x) {
+ h = classify(seq, X)
+ u = length(h[h == 1]) / length(h)
+} 
+  
 #' Function to calculate code usage per gene
 #' @param data Data frame with the column GENE_NAMES
 #' @param fasta List of all sequences
